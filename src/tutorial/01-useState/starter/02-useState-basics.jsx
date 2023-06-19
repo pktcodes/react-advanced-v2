@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const UseStateBasics = () => {
   // console.log(useState(0));
@@ -12,6 +12,7 @@ const UseStateBasics = () => {
 
   // Using Array Destructuring
   const [count, setCount] = useState(0);
+  const [name, setName] = React.useState('hello');
 
   const handleClick = () => {
     setCount(count + 1);
