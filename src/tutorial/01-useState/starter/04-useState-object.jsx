@@ -5,6 +5,7 @@ const UseStateObject = () => {
   const [age, setAge] = useState(25);
   const [hobby, setHobby] = useState('read books');
 
+  // Auto Batching- From React 18,here updating 3 states values is grouped into single update and as a result only one re-render occurs
   const displayPerson = () => {
     setName('john');
     setAge(30);
