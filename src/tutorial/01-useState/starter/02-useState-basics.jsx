@@ -14,8 +14,10 @@ const UseStateBasics = () => {
   const [count, setCount] = useState(0);
   const [name, setName] = React.useState('hello');
 
+  // Synchronous Behaviour is not expected immediately
   const handleClick = () => {
     setCount(count + 1);
+    console.log(count);
   };
 
   return (
