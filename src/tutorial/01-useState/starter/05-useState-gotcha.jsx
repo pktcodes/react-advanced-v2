@@ -4,8 +4,13 @@ const UseStateGotcha = () => {
   const [count, setCount] = useState(0);
 
   const handleIncrease = () => {
-    setCount(count + 1);
-    console.log(count);
+    // setCount(count + 1);
+
+    setCount((currentState) => {
+      const newState = currentState + 1;
+      return newState;
+    });
+    // console.log(count);
   };
 
   return (
