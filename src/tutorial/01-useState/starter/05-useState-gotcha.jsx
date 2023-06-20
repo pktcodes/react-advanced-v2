@@ -1,21 +1,20 @@
 import { useState } from 'react';
 
 const UseStateGotcha = () => {
-  const [count, setCount] = useState(0);
+  const [value, setValue] = useState(0);
 
   const handleIncrease = () => {
-    // setCount(count + 1);
-
-    setCount((currentState) => {
-      const newState = currentState + 1;
-      return newState;
-    });
-    // console.log(count);
+    setTimeout(() => {
+      console.log('Clicked the button');
+      setValue((currentValue) => {
+        return currentValue + 1;
+      });
+    }, 3000);
   };
 
   return (
     <>
-      <h1>{count}</h1>
+      <h1>{value}</h1>
       <button type="button" className="btn" onClick={handleIncrease}>
         increase
       </button>
