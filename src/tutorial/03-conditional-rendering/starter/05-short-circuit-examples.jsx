@@ -31,6 +31,19 @@ const ShortCircuitExamples = () => {
           <h2>{name}</h2>
         </div>
       )} */}
+
+      <br />
+      <hr />
+
+      {/* Ternary Operator */}
+      <h2 style={{ margin: '1.5rem 0' }}>ternary operator</h2>
+      <button className="btn">{isEditing ? 'editing' : 'add'}</button>
+
+      {user ? (
+        <h4 style={{ margin: '1.5rem 0' }}>hello there, {user.name}</h4>
+      ) : (
+        <h4 style={{ margin: '1.5rem 0' }}>please login</h4>
+      )}
     </div>
   );
 };
