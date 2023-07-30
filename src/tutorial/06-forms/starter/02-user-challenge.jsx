@@ -20,6 +20,11 @@ const UserChallenge = () => {
     setName('');
   };
 
+  const handleRemoveUser = (id) => {
+    const updatedUsers = users.filter((person) => person.id !== id);
+    setUsers(updatedUsers);
+  };
+
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
@@ -45,9 +50,16 @@ const UserChallenge = () => {
       </form>
       {/* render users below */}
       <h2>Users</h2>
-      {users.map((user) => (
-        <h4 key={user.id}>{user.name}</h4>
-      ))}
+      {users.map((user) => {
+        return (
+          <div key={user.id}>
+            <h4>{user.name}</h4>
+            <button className="btn" onClick={() => handleRemoveUser(user.id)}>
+              remove
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };
