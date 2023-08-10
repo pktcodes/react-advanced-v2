@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 const UseRefBasics = () => {
   const [value, setValue] = useState(0);
   const refContainer = useRef(null);
-  // console.log('Inside Component', refContainer);
+  const isMounted = useRef(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,10 +11,23 @@ const UseRefBasics = () => {
     console.log(name);
   };
 
+  /*   No need of dependency array, since using useRef 
+  prevents infinite loop which is opposite to useState */
+  useEffect(() => {
+    refContainer.current.focus();
+  });
+
   // Runs After Initial Render
-  // useEffect(() => {
-  //   console.log('Inside useEffect', refContainer);
-  // });
+  useEffect(() => {
+    // console.log('Inside useEffect', refContainer);
+
+    // Here, we are prevent log on initial render
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+    console.log('Re-render');
+  }, [value]);
 
   return (
     <div>
