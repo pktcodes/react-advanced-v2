@@ -6,10 +6,19 @@ const defaultState = {
   isLoading: false,
 };
 
+/* ACTION VARIABLES */
+const CLEAR_LIST = 'CLEAR_LIST';
+const RESET_LIST = 'RESET_LIST';
+const REMOVE_ID = 'REMOVE_ID';
+
 const reducer = (state, action) => {
-  if (action.type === 'CLEAR_LIST') {
+  if (action.type === CLEAR_LIST) {
     return { ...state, people: [] };
   }
+
+  // return state;
+
+  throw new Error(`No matching "${action.type}" - action type`);
 };
 
 const ReducerBasics = () => {
@@ -23,11 +32,12 @@ const ReducerBasics = () => {
   };
 
   const clearList = () => {
-    dispatch({ type: 'CLEAR_LIST' });
+    dispatch({ type: CLEAR_LIST });
     // setPeople([]);
   };
 
   const resetList = () => {
+    dispatch({ type: 'something' });
     // setPeople(data);
   };
 
