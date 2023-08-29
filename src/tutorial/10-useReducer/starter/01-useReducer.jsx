@@ -15,6 +15,9 @@ const reducer = (state, action) => {
   if (action.type === CLEAR_LIST) {
     return { ...state, people: [] };
   }
+  if (action.type === RESET_LIST) {
+    return { ...state, people: data };
+  }
 
   // return state;
 
@@ -33,12 +36,10 @@ const ReducerBasics = () => {
 
   const clearList = () => {
     dispatch({ type: CLEAR_LIST });
-    // setPeople([]);
   };
 
   const resetList = () => {
-    dispatch({ type: 'something' });
-    // setPeople(data);
+    dispatch({ type: RESET_LIST });
   };
 
   return (
