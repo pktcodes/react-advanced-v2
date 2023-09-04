@@ -1,14 +1,16 @@
 import { useState } from 'react';
+
 import { data } from '../../../../data';
 import List from './List';
+
 const LowerState = () => {
   const [people, setPeople] = useState(data);
   const [count, setCount] = useState(0);
 
   return (
-    <section>
+    <section className="container">
       <button
-        className='btn'
+        className="btn"
         onClick={() => setCount(count + 1)}
         style={{ marginBottom: '1rem' }}
       >
@@ -18,4 +20,5 @@ const LowerState = () => {
     </section>
   );
 };
+
 export default LowerState;

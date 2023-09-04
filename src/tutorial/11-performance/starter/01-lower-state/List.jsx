@@ -1,4 +1,5 @@
 import Person from './Person';
+import propTypes from 'prop-types';
 
 const List = ({ people }) => {
   return (
@@ -9,4 +10,9 @@ const List = ({ people }) => {
     </div>
   );
 };
+
+List.propTypes = {
+  people: propTypes.array,
+};
+
 export default List;
