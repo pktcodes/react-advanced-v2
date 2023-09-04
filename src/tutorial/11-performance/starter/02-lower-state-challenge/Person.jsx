@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 const Person = ({ name }) => {
   return (
     <div>
@@ -5,4 +7,9 @@ const Person = ({ name }) => {
     </div>
   );
 };
+
+Person.propTypes = {
+  name: propTypes.string,
+};
+
 export default Person;
