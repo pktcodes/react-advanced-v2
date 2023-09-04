@@ -1,4 +1,7 @@
+import { memo } from 'react';
+
 import Item from './Person';
+import propTypes from 'prop-types';
 
 const List = ({ people }) => {
   return (
@@ -9,4 +12,9 @@ const List = ({ people }) => {
     </div>
   );
 };
-export default List;
+
+List.propTypes = {
+  people: propTypes.array,
+};
+
+export default memo(List);
