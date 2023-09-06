@@ -1,12 +1,16 @@
 # React - Advanced Concepts
 
-## React Course
+> PROD [Live] : https://react-advanced-v2-prod.netlify.app/
 
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
+To run the project locally, clone the repo, `npm install` to install the dependencies, and `npm run dev` to start up the development server on default port 5173.
 
-## Support
+#### Languages
 
-Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
+HTML, CSS, JavaScript, ECMAScript, React 
+
+#### Deployment / Hosting
+
+Netlify
 
 ## Run App
 
@@ -57,3 +61,7 @@ Rest of the content in the TUTORIAL.md
 #### React Router
 
 15. Cocktails
+
+---
+
+_Note: I have developed this project as part of React 18 Tutorial and Projects Course (2023) taught by John Smilga._
